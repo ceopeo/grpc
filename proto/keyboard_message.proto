@@ -1,0 +1,15 @@
+syntax = "proto3";
+package grpc.pb;
+option go_package = "pb";
+
+message Keyboard {
+    enum Layout {
+        UNKNOWN = 0;
+        QUERTY = 1;
+        QUERTZ = 2;
+        AZERTY = 3;
+        
+    }
+    Layout layout = 1;
+    bool backlit = 2;
+}
